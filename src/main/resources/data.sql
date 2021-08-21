@@ -1,0 +1,2 @@
+INSERT INTO CADENA (ID, NAME, DESCRIPCION)
+VALUES ('1', 'ZARA', 'Tienda de ropa');
