@@ -1,21 +1,19 @@
-package zara.controller;
+package com.example.testamarisentrevista.zara.controller;
 
+import com.example.testamarisentrevista.zara.entity.Cadena;
+import com.example.testamarisentrevista.zara.service.CadenaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import zara.model.cadena.Cadena;
-import zara.repository.CadenaRepository;
-import zara.service.CadenaService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api-zara")
 public class CadenaController {
 
     @Autowired
@@ -26,11 +24,11 @@ public class CadenaController {
         return "Hola mundo";
     }
 
-    @GetMapping("cadena")
+    @GetMapping("/cadenas")
     public ResponseEntity<List<Cadena>> all() {
         try {
-            List<Cadena> cadenaList = this.cadenaService.all();
-            if (cadenaList.isEmpty() || cadenaList.size() == 0) {
+            List<Cadena> cadenaList = this.cadenaService.getCadenaList();
+            if (cadenaList.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
 
@@ -39,4 +37,5 @@ public class CadenaController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 }
