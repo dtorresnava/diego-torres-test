@@ -1,6 +1,6 @@
-package com.example.testamarisentrevista.zara.repository;
+package com.example.testamarisentrevista.zara.repository.cadena;
 
-import com.example.testamarisentrevista.zara.entity.Cadena;
+import com.example.testamarisentrevista.zara.entity.cadena.Cadena;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

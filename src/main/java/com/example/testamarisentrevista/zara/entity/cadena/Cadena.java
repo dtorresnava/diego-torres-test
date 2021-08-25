@@ -1,4 +1,4 @@
-package com.example.testamarisentrevista.zara.entity;
+package com.example.testamarisentrevista.zara.entity.cadena;
 
 import lombok.Getter;
 import lombok.Setter;

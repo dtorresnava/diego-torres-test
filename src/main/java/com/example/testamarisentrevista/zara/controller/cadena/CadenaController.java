@@ -1,7 +1,7 @@
-package com.example.testamarisentrevista.zara.controller;
+package com.example.testamarisentrevista.zara.controller.cadena;
 
-import com.example.testamarisentrevista.zara.entity.Cadena;
-import com.example.testamarisentrevista.zara.service.CadenaService;
+import com.example.testamarisentrevista.zara.entity.cadena.Cadena;
+import com.example.testamarisentrevista.zara.service.cadena.CadenaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
