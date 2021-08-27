@@ -40,9 +40,6 @@ public class PricesService {
     public PricesResponse getOne(Integer id) {
         ObjectMapper objectMapper = new ObjectMapper();
         Optional<Prices> prices = this.pricesRepository.findById(id);
-        if (prices.isPresent())
-            return objectMapper.convertValue(prices.get(), PricesResponse.class);
-        else
-            return null;
+        return prices.map(value -> objectMapper.convertValue(value, PricesResponse.class)).orElse(null);
     }
 }
